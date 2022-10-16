@@ -21,7 +21,7 @@ final class OwlCategoryBundle extends AbstractResourceBundle
     public function build(ContainerBuilder $container): void
     {
         parent::build($container);
-        
+
         $container->addCompilerPass(new RegisterFileFactoryPass());
     }
 
