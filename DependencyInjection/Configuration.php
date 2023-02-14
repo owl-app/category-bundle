@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Owl\Bundle\CategoryBundle\DependencyInjection;
 
-use Owl\Bridge\SyliusResourceBridge\Controller\BaseController;
+use Owl\Bridge\SyliusResource\Controller\BaseController;
 use Sylius\Bundle\ResourceBundle\SyliusResourceBundle;
 use Owl\Bundle\CategoryBundle\Form\Type\CategoryType;
 use Owl\Component\Category\Model\CategoryInterface;

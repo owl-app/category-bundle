@@ -6,8 +6,6 @@ namespace Owl\Bundle\CategoryBundle;
 
 use Sylius\Bundle\ResourceBundle\AbstractResourceBundle;
 use Sylius\Bundle\ResourceBundle\SyliusResourceBundle;
-use Owl\Bundle\CategoryBundle\DependencyInjection\Compiler\RegisterFileFactoryPass;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 final class OwlCategoryBundle extends AbstractResourceBundle
 {
@@ -16,13 +14,6 @@ final class OwlCategoryBundle extends AbstractResourceBundle
         return [
             SyliusResourceBundle::DRIVER_DOCTRINE_ORM,
         ];
-    }
-
-    public function build(ContainerBuilder $container): void
-    {
-        parent::build($container);
-
-        $container->addCompilerPass(new RegisterFileFactoryPass());
     }
 
     /**
