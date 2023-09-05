@@ -18,6 +18,11 @@ final class LoadMetadataSubscriber implements EventSubscriber
         $this->subjects = $subjects;
     }
 
+    /**
+     * @return string[]
+     *
+     * @psalm-return list{'loadClassMetadata'}
+     */
     public function getSubscribedEvents(): array
     {
         return [
@@ -66,6 +71,11 @@ final class LoadMetadataSubscriber implements EventSubscriber
     //     ];
     // }
 
+    /**
+     * @return (((string|true)[]|string)[]|string)[]
+     *
+     * @psalm-return array{fieldName: 'category', targetEntity: string, joinColumns: list{array{name: 'category_id', referencedColumnName: string, nullable: true, onDelete: 'SET NULL'}}, orderBy: array{createdAt: 'DESC'}}
+     */
     private function createCategoriesMapping(
         string $categoryEntity,
         ClassMetadata $categoryEntityMetadata
