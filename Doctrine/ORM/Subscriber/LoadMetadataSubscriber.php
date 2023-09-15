@@ -78,7 +78,7 @@ final class LoadMetadataSubscriber implements EventSubscriber
      */
     private function createCategoriesMapping(
         string $categoryEntity,
-        ClassMetadata $categoryEntityMetadata
+        ClassMetadata $categoryEntityMetadata,
     ): array {
         return [
             'fieldName' => 'category',
@@ -89,7 +89,7 @@ final class LoadMetadataSubscriber implements EventSubscriber
                 'nullable' => true,
                 'onDelete' => 'SET NULL',
             ]],
-            'orderBy' => ['createdAt' => 'DESC']
+            'orderBy' => ['createdAt' => 'DESC'],
         ];
     }
 }

@@ -24,8 +24,6 @@ final class OwlCategoryBundle extends AbstractResourceBundle
     /**
      * @psalm-suppress MismatchingDocblockReturnType https://github.com/vimeo/psalm/issues/2345
      *
-     * @return string
-     *
      * @psalm-return 'Owl\Component\Category\Model'
      */
     protected function getModelNamespace(): string

@@ -23,7 +23,7 @@ final class LoadMetadataSubscriberSpec extends ObjectBehavior
                     'classes' => [
                         'model' => 'AcmeBundle\Entity\CategoryModel',
                     ],
-                ]
+                ],
             ],
         ]);
     }
@@ -62,7 +62,7 @@ final class LoadMetadataSubscriberSpec extends ObjectBehavior
                 'nullable' => true,
                 'onDelete' => 'SET NULL',
             ]],
-            'orderBy' => ['createdAt' => 'DESC']
+            'orderBy' => ['createdAt' => 'DESC'],
         ])->shouldBeCalled();
 
         $this->loadClassMetadata($eventArguments);
@@ -81,7 +81,7 @@ final class LoadMetadataSubscriberSpec extends ObjectBehavior
                     'classes' => [
                         'model' => 'AcmeBundle\Entity\CategoryModel',
                     ],
-                ]
+                ],
             ],
         ]);
 
